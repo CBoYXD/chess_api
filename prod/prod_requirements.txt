@@ -1,0 +1,14 @@
+environs==14.1.1
+uvicorn
+gunicorn
+fastapi
+pydantic_settings
+redis
+betterlogging
+websockets
+# # For PostgreSQL sqlalchemy + alembic:
+sqlalchemy
+alembic
+asyncpg
+tweepy==4.14.0
+async-lru==2.0.4

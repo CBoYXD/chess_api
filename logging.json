@@ -1,0 +1,103 @@
+{
+	"version": 1,
+	"disable_existing_loggers": false,
+	"formatters": {
+		"main": {
+			"format": "%(filename)s:%(lineno)d #%(levelname)-8s [%(asctime)s] - %(name)s - %(message)s"
+		}
+	},
+	"handlers": {
+		"dev_file": {
+			"class": "logging.handlers.RotatingFileHandler",
+			"level": "ERROR",
+			"formatter": "main",
+			"filename": "logs/dev.log",
+			"maxBytes": 52428800, 
+    		"backupCount": 2
+		},
+        "sqlalchemy": {
+			"class": "logging.handlers.RotatingFileHandler",
+			"level": "INFO",
+			"formatter": "main",
+			"filename": "logs/sqlalchemy.log",
+			"maxBytes": 52428800, 
+    		"backupCount": 2
+		},
+		"search_file": {
+			"class": "logging.handlers.RotatingFileHandler",
+			"level": "INFO",
+			"formatter": "main",
+			"filename": "logs/search_data.log",
+			"maxBytes": 52428800, 
+    		"backupCount": 2
+		},
+		"room_file": {
+			"class": "logging.handlers.RotatingFileHandler",
+			"level": "INFO",
+			"formatter": "main",
+			"filename": "logs/room_data.log",
+			"maxBytes": 52428800, 
+    		"backupCount": 2
+		},
+		"play_file": {
+			"class": "logging.handlers.RotatingFileHandler",
+			"level": "INFO",
+			"formatter": "main",
+			"filename": "logs/play_data.log",
+			"maxBytes": 52428800, 
+    		"backupCount": 2
+		},
+		"watch_file": {
+			"class": "logging.handlers.RotatingFileHandler",
+			"level": "INFO",
+			"formatter": "main",
+			"filename": "logs/watch_data.log",
+			"maxBytes": 52428800, 
+    		"backupCount": 2
+		}
+	},
+	"loggers": {
+		"root_file": {
+			"level": "ERROR",
+			"handlers": [
+				"dev_file"
+			],
+			"propagate": false
+		},
+        "sqlalchemy.engine": {
+			"level": "INFO",
+			"handlers": [
+				"sqlalchemy"
+			],
+			"propagate": false
+		},
+		"search": {
+			"level": "INFO",
+			"handlers": [
+				"search_file"
+			],
+			"propagate": false
+		},
+		"room": {
+			"level": "INFO",
+			"handlers": [
+				"room_file"
+			],
+			"propagate": false
+		},
+		"play": {
+			"level": "INFO",
+			"handlers": [
+				"play_file"
+			],
+			"propagate": false
+		},
+		"watch": {
+			"level": "INFO",
+			"handlers": [
+				"watch_file"
+			],
+			"propagate": false
+		}
+	}
+}
