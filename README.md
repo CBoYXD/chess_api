@@ -1,1 +1,1 @@
-# Chess bot
+# Chess api
